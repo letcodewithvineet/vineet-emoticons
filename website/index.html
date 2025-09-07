@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Vineet‑emoticons – explore a curated emoji library and design your own custom emojis." />
+  <title>vineet‑emoticons | Explore and Create Emojis</title>
+  <!-- Primary stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+  <!-- Preconnect to Google fonts for improved performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <!-- Import a friendly sans‑serif font for the UI -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <!-- Site header with navigation -->
+  <header>
+    <div class="wrapper nav-wrapper">
+      <h1 class="logo">vineet‑emoticons</h1>
+      <nav>
+        <ul class="nav-list">
+          <li><a href="#picker">Emoji Library</a></li>
+          <li><a href="#creator">Create Your Own</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero section introducing the website -->
+  <section class="hero">
+    <div class="wrapper hero-inner">
+      <div class="hero-content">
+        <h2>Discover &amp; Create Emojis</h2>
+        <p>
+          Browse a curated collection of colourful emojis or design your
+          very own expressive icon with a few clicks. Let your
+          imagination run wild!
+        </p>
+        <a href="#picker" class="btn primary-btn">Get started</a>
+      </div>
+      <div class="hero-image">
+        <!-- Decorative illustration (generated locally) -->
+        <img src="assets/hero.png" alt="Colourful abstract emoji artwork" />
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <!-- Emoji picker section -->
+    <section id="picker" class="picker-section">
+      <div class="wrapper">
+        <h2>Emoji Library</h2>
+        <p class="section-intro">
+          Tap on any emoji to see it up close, copy the character, or download
+          a high‑resolution version to use in your projects.
+        </p>
+        <div class="picker-container">
+          <!-- Preview panel -->
+          <div class="emoji-display">
+            <div class="emoji-preview" id="emoji-preview">🙂</div>
+            <h3 id="emoji-name">Smiling Face</h3>
+            <p class="emoji-id"><strong>ID:</strong> <span id="emoji-id">smiling-face</span></p>
+            <div class="button-group">
+              <button id="download-btn" class="btn secondary-btn">Download</button>
+              <button id="copy-btn" class="btn secondary-btn">Copy</button>
+            </div>
+          </div>
+
+          <!-- Picker panel -->
+          <div class="emoji-picker">
+            <input type="text" id="search-input" class="search-input" placeholder="Search emojis..." aria-label="Search emojis" />
+            <!-- Category toggles will be injected by script.js -->
+            <div class="categories" id="categories"></div>
+            <!-- Emoji grid will be populated dynamically -->
+            <div class="emoji-grid" id="emoji-grid"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Custom emoji creator section -->
+    <section id="creator" class="creator-section">
+      <div class="wrapper">
+        <h2>Create Your Own Emoji</h2>
+        <p class="section-intro">
+          Select a face colour, choose eye and mouth shapes and generate a
+          personalised emoji. You can then download your masterpiece or copy
+          it to your clipboard.
+        </p>
+        <div class="creator-container">
+          <!-- Controls for selecting colours and features -->
+          <div class="controls">
+            <div class="control-group">
+              <label>Face colour</label>
+              <div class="color-options" id="color-options"></div>
+            </div>
+            <div class="control-group">
+              <label>Eyes</label>
+              <div class="eyes-options" id="eyes-options"></div>
+            </div>
+            <div class="control-group">
+              <label>Mouth</label>
+              <div class="mouth-options" id="mouth-options"></div>
+            </div>
+            <button id="create-btn" class="btn primary-btn create-btn">Generate emoji</button>
+          </div>
+
+          <!-- Canvas display and actions -->
+          <div class="custom-display">
+            <canvas id="custom-canvas" width="240" height="240" aria-label="Custom emoji preview"></canvas>
+            <div class="button-group">
+              <button id="download-custom-btn" class="btn secondary-btn">Download</button>
+              <button id="copy-custom-btn" class="btn secondary-btn">Copy</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrapper footer-inner">
+      <p>Made with <span class="heart" aria-hidden="true">❤️</span> by vineet</p>
+    </div>
+  </footer>
+
+  <!-- Application script -->
+  <script src="script.js"></script>
+</body>
+</html>
